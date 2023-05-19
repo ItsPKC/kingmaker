@@ -1,0 +1,286 @@
+name: kingmaker
+description: |
+  Advanced App Opener and Bio Tool. Trending hashtags, audios, videos and more.
+
+  Kingmaker is an integrated platform to boost your presence over internet. It comes with dpGram.com manager and Kingmaker's core features.
+
+  dpGram.com manager : User dashboard of dpGram.com, a profile management platform to list online profiles associated with an individual, brand, or/and organization.
+
+  - Create dpGram.com account.
+  - Create universal profile with your favourite username.
+  - Interconnect all social media profiles and other links.
+  - List all online presence, including social media profiles.
+  - Add your favourite YouTube video ( open and play in app ).
+  - Create Bio Link to connect and share everything at once.
+
+  dpGram Bio Link is an advanced App Opener. The URLs associated with the Bio Link will automatically open in the respective app.
+
+
+  Kingmaker's core features :  It helps to get information about trending sounds, videos and hashtags on various social media platforms.
+
+  - Know about trending videos.
+  - Preview and get trending sounds.
+  - Copy/paste trending hashtags.
+
+  We hope you'll get benefits, feel better and enjoy Kingmaker as much as we enjoyed developing it. Looking forward to your participation in making this platform more reliable for users like you.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 2.1.1+12
+
+environment:
+  sdk: ">=2.18.2 <3.0.0"
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+  # firebase_app_check: ^0.0.7+1
+  firebase_app_check: ^0.1.1+5
+  google_sign_in: ^5.4.2
+  # firebase_core: ^1.21.1
+  firebase_core: ^2.3.0
+  # cloud_firestore: ^3.4.6
+  cloud_firestore: ^4.1.0
+  # cloud_functions: ^3.2.16
+  cloud_functions: ^4.0.5
+  # firebase_storage: ^10.2.15
+  firebase_storage: ^11.0.6
+  webview_flutter: ^3.0.4
+  # firebase_auth: ^3.7.0
+  firebase_auth: ^4.1.3
+  # google_mobile_ads: ^1.3.0
+  google_mobile_ads: ^2.3.0
+  provider: ^6.0.2
+  connectivity_plus: ^2.3.4
+  path_provider: ^2.0.9
+  url_launcher: ^6.0.12
+  intl: ^0.17.0
+  flutter_downloader: ^1.7.3
+  permission_handler: ^10.2.0
+  # audioplayers: ^0.20.1
+  just_audio: ^0.9.20
+  # file_picker: ^4.5.1
+  image_picker: ^0.8.5+3
+  country_picker: ^2.0.8
+  cached_network_image: ^3.2.1
+  image_cropper: ^2.0.3
+  # Applovin Ads + dependency is also added at /android/app/build.gradle
+  # applovin_max: ^2.0.0
+  shared_preferences: ^2.0.15
+  share_plus: ^4.0.10
+  package_info_plus: ^1.4.3+1
+  device_info_plus: ^8.0.0
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+  syncfusion_flutter_charts: ^20.3.57
+  video_player: ^2.4.8
+  firebase_performance: ^0.9.0+7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_native_splash: ^2.2.16
+  flutter_launcher_icons: ^0.10.0
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^2.0.0
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/logo.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  web:
+    generate: true
+    image_path: "assets/logo.png"
+    background_color: "#FFFFFF"
+    theme_color: "#FFFFFF"
+  windows:
+    generate: true
+    image_path: "assets/logo.png"
+    icon_size: 48 # min:48, max:256, default: 48
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: "assets/logo.png"
+
+# flutter_icons:
+#   # flutter pub run flutter_launcher_icons:main
+#   android: true
+#   # ios: true
+#   image_path: "assets/logo.png"
+#   adaptive_icon_background: "#FFFFF"
+#   #240E7B
+#   adaptive_icon_foreground: "assets/logo.png"
+
+flutter_native_splash:
+  # flutter pub run flutter_native_splash:create
+
+  color: "#ffffff"
+  #background_image: "assets/background.png"
+  # The image parameter allows you to specify an image used in the splash screen.  It must be a
+  # png file.
+  image: assets/logo.png
+  branding: assets/icyindia.png
+  branding_mode: bottom
+  android: true
+  ios: false
+  web: false
+  android_gravity: center
+  fullscreen: true
+  android_12:
+    image: assets/logoSplash.png
+    branding: assets/icyindia12.png
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/wa.png
+    - assets/logo.png
+    - assets/logoSplash.png
+    - assets/logoAppBar.png
+    - assets/logoWebView.png
+    - assets/icyindia.png
+    - assets/dpgram-logo.png
+    - assets/dpgramGrey.png
+    - assets/dpgramRed.png
+    - assets/dpgramTransparent.png
+    - assets/dpgram-motto.png
+    - assets/KingmakerGuide.png
+    - assets/Google.png
+    - assets/JoinTrend.png
+    - assets/JoinTrendSquare.png
+    - assets/Referral.png
+    - assets/GeneralTexture/image1.jpg
+    - assets/GeneralTexture/image2.jpg
+    - assets/GeneralTexture/image3.jpg
+    - assets/GeneralTexture/image4.jpg
+    - assets/GeneralTexture/image7.jpg
+    - assets/GeneralTexture/image19.jpg
+    - assets/GeneralTexture/image23.jpg
+    - assets/GeneralTexture/image221.jpeg
+    - assets/GeneralTexture/image111.jpg
+    - assets/LeatherTexture/L11.jpg
+    - assets/LeatherTexture/L43.jpg
+    - assets/LeatherTexture/L53.jpg
+    - assets/LeatherTexture/L73.jpg
+    - assets/LeatherTexture/L103.jpg
+    - assets/not_found.png
+    - assets/person.png
+    - assets/fileImage.png
+    - assets/gif/OpenEveryLinkInTheApp.gif
+    - assets/gif/MergeYourAudience.gif
+    - assets/gif/InterconnectAllYourProfiles.gif
+    - assets/videos/KingmakerGuidePromo.mp4
+    # ---------------------------------------------------
+    - assets/socialImage/amazon.png
+    - assets/socialImage/badoo.png
+    - assets/socialImage/chingari.png
+    - assets/socialImage/codechef.png
+    - assets/socialImage/discord.png
+    - assets/socialImage/email.png
+    - assets/socialImage/facebook.png
+    - assets/socialImage/github.png
+    - assets/socialImage/hipi.png
+    - assets/socialImage/hackerrank.png
+    - assets/socialImage/instagram.png
+    - assets/socialImage/josh.png
+    - assets/socialImage/koo.png
+    - assets/socialImage/leetcode.png
+    - assets/socialImage/linkedin.png
+    - assets/socialImage/medium.png
+    - assets/socialImage/moj.png
+    - assets/socialImage/pinterest.png
+    - assets/socialImage/qq.png
+    - assets/socialImage/qzone.png
+    - assets/socialImage/reddit.png
+    - assets/socialImage/shorts.png
+    - assets/socialImage/sinaweibo.png
+    - assets/socialImage/snapchat.png
+    - assets/socialImage/stackoverflow.png
+    - assets/socialImage/takatak.png
+    - assets/socialImage/telegram.png
+    - assets/socialImage/tiki.png
+    - assets/socialImage/tiktok.png
+    - assets/socialImage/tumblr.png
+    - assets/socialImage/twitch.png
+    - assets/socialImage/twitter.png
+    - assets/socialImage/vigovideo.png
+    - assets/socialImage/whatsapp.png
+    - assets/socialImage/youtube.png
+    - assets/socialImage/spotify.png
+    - assets/socialImage/amazonmusic.png
+    - assets/socialImage/applepodcasts.png
+    - assets/socialImage/website.png
+    - assets/socialImage/shop.png
+    - assets/socialImage/zili.png
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  fonts:
+    - family: Signika
+      fonts:
+        - asset: fonts/Signika-Bold.ttf
+          weight: 700
+        - asset: fonts/Signika-Light.ttf
+          weight: 300
+        - asset: fonts/Signika-Medium.ttf
+          weight: 500
+        - asset: fonts/Signika-Regular.ttf
+          weight: 400
+        - asset: fonts/Signika-SemiBold.ttf
+          weight: 600
+
+    - family: Kalam
+      fonts:
+        - asset: fonts/Kalam-Bold.ttf
+          weight: 700
+        - asset: fonts/Signika-Light.ttf
+          weight: 300
+        - asset: fonts/Signika-Regular.ttf
+          weight: 400
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages

@@ -1,0 +1,72 @@
+{
+  "project_info": {
+    "project_number": "125357790545",
+    "firebase_url": "https://kingmaker-2022-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "kingmaker-2022",
+    "storage_bucket": "kingmaker-2022.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125357790545:android:f4c25447cbe6b624a16f70",
+        "android_client_info": {
+          "package_name": "com.icyindia.kingmaker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "125357790545-8566lft6gsdj0b8qrg8fsfvgv8umomor.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.icyindia.kingmaker",
+            "certificate_hash": "e820304c03b794d27b76b0d50d29390d5d27ac80"
+          }
+        },
+        {
+          "client_id": "125357790545-gfnl62cb2m4omars02s9sakjl8gdlvee.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.icyindia.kingmaker",
+            "certificate_hash": "998192230c826e353610083a0078142783e02242"
+          }
+        },
+        {
+          "client_id": "125357790545-pufstj8n4j6ts0r07s88d16evt138mf9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.icyindia.kingmaker",
+            "certificate_hash": "b127e5a4e37dabe8ac29109bf8170957f27faa91"
+          }
+        },
+        {
+          "client_id": "125357790545-berke86chal77ep8essplrnh96qvrve9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXuK1BxhOnKZ8g4bX7Tc4_jDNfpbC2ZEo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "125357790545-berke86chal77ep8essplrnh96qvrve9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "125357790545-oj8ae55sn8t1j94en2i5244odkek133i.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.icyindia.kingmaker"
+              }
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-4788716700673911~6922278219"
+    }
+  ],
+  "configuration_version": "1"
+}

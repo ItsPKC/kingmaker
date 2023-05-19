@@ -1,0 +1,119 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.icyindia.kingmaker">
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="32"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"></uses-permission>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"></uses-permission>
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID"></uses-permission>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"></uses-permission>
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"></uses-permission>
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"></uses-permission>
+
+    <application
+        android:name="${applicationName}"
+        android:icon="@mipmap/launcher_icon"
+        android:label="Kingmaker"
+        android:preserveLegacyExternalStorage="true"
+        android:requestLegacyExternalStorage="true"
+    >
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:exported="true"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:theme="@style/LaunchTheme"
+            android:windowSoftInputMode="adjustResize">
+            <!-- Specifies an Android theme to apply to this Activity as soon as
+                 the
+            Android process has started. This theme is visible to the user
+                 while
+            the Flutter UI initializes. After that, this theme continues
+                 to
+            determine the Window background behind the Flutter UI. -->
+            <meta-data
+                android:name="io.flutter.embedding.android.NormalTheme"
+                android:resource="@style/NormalTheme"></meta-data>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"></action>
+                <category android:name="android.intent.category.LAUNCHER"></category>
+            </intent-filter>
+            <!-- Deep linking -->
+            <meta-data
+                android:name="flutter_deeplinking_enabled"
+                android:value="true"></meta-data>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"></action>
+
+                <category android:name="android.intent.category.DEFAULT"></category>
+                <category android:name="android.intent.category.BROWSABLE"></category>
+
+                <data
+                    android:host="kingmaker.icyindia.com"
+                    android:scheme="http"></data>
+                <data android:scheme="https"></data>
+            </intent-filter>
+        </activity>
+        <!-- Don't delete the meta-data below.
+             This is used by the Flutter tool to
+        generate GeneratedPluginRegistrant.java -->
+        <meta-data
+            android:name="flutterEmbedding"
+            android:value="2"></meta-data>
+        <!-- Manual Code
+        ........................................................................................ -->
+
+        <!-- Sample AdMob App ID: ca-app-pub-3940256099942544~3347511713 -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-4788716700673911~6922278219"></meta-data>
+
+
+        <!-- For Flutter_downloader plugin  -->
+        <provider
+            android:name="vn.hunghd.flutterdownloader.DownloadedFileProvider"
+            android:authorities="${applicationId}.flutter_downloader.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"></meta-data>
+        </provider>
+        <!-- Also delete tools in first line -->
+        <!-- Begin FlutterDownloader customization -->
+        <!-- disable default Initializer -->
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge">
+            <meta-data
+                android:name="androidx.work.WorkManagerInitializer"
+                android:value="androidx.startup"
+                tools:node="remove"></meta-data>
+        </provider>
+
+        <!-- declare customized Initializer -->
+        <provider
+            android:name="vn.hunghd.flutterdownloader.FlutterDownloaderInitializer"
+            android:authorities="${applicationId}.flutter-downloader-init"
+            android:exported="false">
+            <!-- changes this number to configure the maximum number of concurrent tasks -->
+            <meta-data
+                android:name="vn.hunghd.flutterdownloader.MAX_CONCURRENT_TASKS"
+                android:value="5"></meta-data>
+        </provider>
+        <!-- End FlutterDownloader customization -->
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+
+    </application>
+</manifest>
